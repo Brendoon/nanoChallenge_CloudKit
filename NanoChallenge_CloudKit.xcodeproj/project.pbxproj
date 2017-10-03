@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6533679B1F84356200C75035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533679A1F84356200C75035 /* AppDelegate.swift */; };
+		6533679D1F84356200C75035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533679C1F84356200C75035 /* ViewController.swift */; };
+		653367A01F84356200C75035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533679E1F84356200C75035 /* Main.storyboard */; };
+		653367A31F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 653367A11F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld */; };
+		653367A51F84356200C75035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653367A41F84356200C75035 /* Assets.xcassets */; };
+		653367A81F84356200C75035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653367A61F84356200C75035 /* LaunchScreen.storyboard */; };
+		653367B31F84356200C75035 /* NanoChallenge_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367B21F84356200C75035 /* NanoChallenge_CloudKitTests.swift */; };
+		653367BE1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		653367AF1F84356200C75035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6533678F1F84356100C75035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653367961F84356200C75035;
+			remoteInfo = NanoChallenge_CloudKit;
+		};
+		653367BA1F84356200C75035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6533678F1F84356100C75035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653367961F84356200C75035;
+			remoteInfo = NanoChallenge_CloudKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		653367971F84356200C75035 /* NanoChallenge_CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge_CloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6533679A1F84356200C75035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6533679C1F84356200C75035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6533679F1F84356200C75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		653367A21F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NanoChallenge_CloudKit.xcdatamodel; sourceTree = "<group>"; };
+		653367A41F84356200C75035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		653367A71F84356200C75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		653367A91F84356200C75035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653367AE1F84356200C75035 /* NanoChallenge_CloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge_CloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653367B21F84356200C75035 /* NanoChallenge_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge_CloudKitTests.swift; sourceTree = "<group>"; };
+		653367B41F84356200C75035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653367B91F84356200C75035 /* NanoChallenge_CloudKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge_CloudKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge_CloudKitUITests.swift; sourceTree = "<group>"; };
+		653367BF1F84356200C75035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		653367941F84356200C75035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367AB1F84356200C75035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367B61F84356200C75035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6533678E1F84356100C75035 = {
+			isa = PBXGroup;
+			children = (
+				653367991F84356200C75035 /* NanoChallenge_CloudKit */,
+				653367B11F84356200C75035 /* NanoChallenge_CloudKitTests */,
+				653367BC1F84356200C75035 /* NanoChallenge_CloudKitUITests */,
+				653367981F84356200C75035 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		653367981F84356200C75035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				653367971F84356200C75035 /* NanoChallenge_CloudKit.app */,
+				653367AE1F84356200C75035 /* NanoChallenge_CloudKitTests.xctest */,
+				653367B91F84356200C75035 /* NanoChallenge_CloudKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		653367991F84356200C75035 /* NanoChallenge_CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				6533679A1F84356200C75035 /* AppDelegate.swift */,
+				6533679C1F84356200C75035 /* ViewController.swift */,
+				6533679E1F84356200C75035 /* Main.storyboard */,
+				653367A41F84356200C75035 /* Assets.xcassets */,
+				653367A61F84356200C75035 /* LaunchScreen.storyboard */,
+				653367A91F84356200C75035 /* Info.plist */,
+				653367A11F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld */,
+			);
+			path = NanoChallenge_CloudKit;
+			sourceTree = "<group>";
+		};
+		653367B11F84356200C75035 /* NanoChallenge_CloudKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				653367B21F84356200C75035 /* NanoChallenge_CloudKitTests.swift */,
+				653367B41F84356200C75035 /* Info.plist */,
+			);
+			path = NanoChallenge_CloudKitTests;
+			sourceTree = "<group>";
+		};
+		653367BC1F84356200C75035 /* NanoChallenge_CloudKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */,
+				653367BF1F84356200C75035 /* Info.plist */,
+			);
+			path = NanoChallenge_CloudKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		653367961F84356200C75035 /* NanoChallenge_CloudKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653367C21F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKit" */;
+			buildPhases = (
+				653367931F84356200C75035 /* Sources */,
+				653367941F84356200C75035 /* Frameworks */,
+				653367951F84356200C75035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NanoChallenge_CloudKit;
+			productName = NanoChallenge_CloudKit;
+			productReference = 653367971F84356200C75035 /* NanoChallenge_CloudKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		653367AD1F84356200C75035 /* NanoChallenge_CloudKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653367C51F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKitTests" */;
+			buildPhases = (
+				653367AA1F84356200C75035 /* Sources */,
+				653367AB1F84356200C75035 /* Frameworks */,
+				653367AC1F84356200C75035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				653367B01F84356200C75035 /* PBXTargetDependency */,
+			);
+			name = NanoChallenge_CloudKitTests;
+			productName = NanoChallenge_CloudKitTests;
+			productReference = 653367AE1F84356200C75035 /* NanoChallenge_CloudKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		653367B81F84356200C75035 /* NanoChallenge_CloudKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653367C81F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKitUITests" */;
+			buildPhases = (
+				653367B51F84356200C75035 /* Sources */,
+				653367B61F84356200C75035 /* Frameworks */,
+				653367B71F84356200C75035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				653367BB1F84356200C75035 /* PBXTargetDependency */,
+			);
+			name = NanoChallenge_CloudKitUITests;
+			productName = NanoChallenge_CloudKitUITests;
+			productReference = 653367B91F84356200C75035 /* NanoChallenge_CloudKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6533678F1F84356100C75035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Brendoon Ryos";
+				TargetAttributes = {
+					653367961F84356200C75035 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					653367AD1F84356200C75035 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 653367961F84356200C75035;
+					};
+					653367B81F84356200C75035 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 653367961F84356200C75035;
+					};
+				};
+			};
+			buildConfigurationList = 653367921F84356100C75035 /* Build configuration list for PBXProject "NanoChallenge_CloudKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6533678E1F84356100C75035;
+			productRefGroup = 653367981F84356200C75035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				653367961F84356200C75035 /* NanoChallenge_CloudKit */,
+				653367AD1F84356200C75035 /* NanoChallenge_CloudKitTests */,
+				653367B81F84356200C75035 /* NanoChallenge_CloudKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		653367951F84356200C75035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653367A81F84356200C75035 /* LaunchScreen.storyboard in Resources */,
+				653367A51F84356200C75035 /* Assets.xcassets in Resources */,
+				653367A01F84356200C75035 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367AC1F84356200C75035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367B71F84356200C75035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		653367931F84356200C75035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6533679D1F84356200C75035 /* ViewController.swift in Sources */,
+				6533679B1F84356200C75035 /* AppDelegate.swift in Sources */,
+				653367A31F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367AA1F84356200C75035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653367B31F84356200C75035 /* NanoChallenge_CloudKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653367B51F84356200C75035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653367BE1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		653367B01F84356200C75035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 653367961F84356200C75035 /* NanoChallenge_CloudKit */;
+			targetProxy = 653367AF1F84356200C75035 /* PBXContainerItemProxy */;
+		};
+		653367BB1F84356200C75035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 653367961F84356200C75035 /* NanoChallenge_CloudKit */;
+			targetProxy = 653367BA1F84356200C75035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6533679E1F84356200C75035 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6533679F1F84356200C75035 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		653367A61F84356200C75035 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				653367A71F84356200C75035 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		653367C01F84356200C75035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		653367C11F84356200C75035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		653367C31F84356200C75035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		653367C41F84356200C75035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		653367C61F84356200C75035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoChallenge_CloudKit.app/NanoChallenge_CloudKit";
+			};
+			name = Debug;
+		};
+		653367C71F84356200C75035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoChallenge_CloudKit.app/NanoChallenge_CloudKit";
+			};
+			name = Release;
+		};
+		653367C91F84356200C75035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NanoChallenge_CloudKit;
+			};
+			name = Debug;
+		};
+		653367CA1F84356200C75035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
+				INFOPLIST_FILE = NanoChallenge_CloudKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NanoChallenge_CloudKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		653367921F84356100C75035 /* Build configuration list for PBXProject "NanoChallenge_CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653367C01F84356200C75035 /* Debug */,
+				653367C11F84356200C75035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653367C21F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653367C31F84356200C75035 /* Debug */,
+				653367C41F84356200C75035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653367C51F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653367C61F84356200C75035 /* Debug */,
+				653367C71F84356200C75035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653367C81F84356200C75035 /* Build configuration list for PBXNativeTarget "NanoChallenge_CloudKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653367C91F84356200C75035 /* Debug */,
+				653367CA1F84356200C75035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		653367A11F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				653367A21F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodel */,
+			);
+			currentVersion = 653367A21F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodel */;
+			path = NanoChallenge_CloudKit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6533678F1F84356100C75035 /* Project object */;
+}
