@@ -15,6 +15,8 @@
 		653367A81F84356200C75035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653367A61F84356200C75035 /* LaunchScreen.storyboard */; };
 		653367B31F84356200C75035 /* NanoChallenge_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367B21F84356200C75035 /* NanoChallenge_CloudKitTests.swift */; };
 		653367BE1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */; };
+		93EDDBD31F850ADC00F5F760 /* MyDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */; };
+		93EDDBD51F850AFB00F5F760 /* SharedDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		653367B91F84356200C75035 /* NanoChallenge_CloudKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge_CloudKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge_CloudKitUITests.swift; sourceTree = "<group>"; };
 		653367BF1F84356200C75035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinksViewController.swift; sourceTree = "<group>"; };
+		93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDrinksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				6533679A1F84356200C75035 /* AppDelegate.swift */,
 				6533679C1F84356200C75035 /* ViewController.swift */,
 				6533679E1F84356200C75035 /* Main.storyboard */,
+				93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */,
+				93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */,
 				653367A41F84356200C75035 /* Assets.xcassets */,
 				653367A61F84356200C75035 /* LaunchScreen.storyboard */,
 				653367A91F84356200C75035 /* Info.plist */,
@@ -263,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6533679D1F84356200C75035 /* ViewController.swift in Sources */,
+				93EDDBD51F850AFB00F5F760 /* SharedDrinksViewController.swift in Sources */,
 				6533679B1F84356200C75035 /* AppDelegate.swift in Sources */,
 				653367A31F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld in Sources */,
+				93EDDBD31F850ADC00F5F760 /* MyDrinksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
