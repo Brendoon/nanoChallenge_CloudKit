@@ -17,6 +17,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        CloudKitManager.shared.fetchUser { (user, error) in
+            guard error == nil else {
+                print("Ocorreu um erro na primeira busca")
+                print(error!)
+                return
+            }
+            
+            guard let user = user else {
+                print("user is nil")
+                return
+            }
+            
+            print(user.string())
+            
+            let coffee = Drink(name: "Black Coffee", descript: "Super Hot", recipe: "Something", drinkType: .coffee)
+            //let tea = Drink(name: "Ice Tea", descript: "Super Cold", recipe: "Something", drinkType: .tea)
+            
+            CloudKitManager.shared.save(drink: coffee, user: user)
+            //CloudKitManager.shared.save(drink: tea, user: user)
+        }
+        
+        CloudKitManager.shared.fetchDrink { (drinks, error) in
+            guard error == nil else {
+                print("Ocorreu um erro na primeira busca")
+                print(error!)
+                return
+            }
+            
+            drinks?.forEach({ (drink) in
+                print(drink.string())
+            })
+        }
+        
         return true
     }
 

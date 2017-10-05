@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		6533679B1F84356200C75035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533679A1F84356200C75035 /* AppDelegate.swift */; };
-		6533679D1F84356200C75035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533679C1F84356200C75035 /* ViewController.swift */; };
-		653367A01F84356200C75035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533679E1F84356200C75035 /* Main.storyboard */; };
 		653367A31F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 653367A11F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld */; };
 		653367A51F84356200C75035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653367A41F84356200C75035 /* Assets.xcassets */; };
 		653367A81F84356200C75035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653367A61F84356200C75035 /* LaunchScreen.storyboard */; };
 		653367B31F84356200C75035 /* NanoChallenge_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367B21F84356200C75035 /* NanoChallenge_CloudKitTests.swift */; };
 		653367BE1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */; };
-		93EDDBD31F850ADC00F5F760 /* MyDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */; };
-		93EDDBD51F850AFB00F5F760 /* SharedDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */; };
-		93EDDBD71F85B58C00F5F760 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDDBD61F85B58C00F5F760 /* InfoViewController.swift */; };
+		653367CE1F8567BF00C75035 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653367CD1F8567BF00C75035 /* CloudKit.framework */; };
+		653367D01F856B4700C75035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367CF1F856B4700C75035 /* User.swift */; };
+		653367D21F856B5500C75035 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367D11F856B5500C75035 /* Drink.swift */; };
+		653367D41F856B7000C75035 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367D31F856B7000C75035 /* CloudKitManager.swift */; };
+		653367D61F856F0600C75035 /* CKRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367D51F856F0600C75035 /* CKRecordExtension.swift */; };
+		653367D91F85EF2200C75035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653367D71F85EF2200C75035 /* Main.storyboard */; };
+		653367DE1F85EF7700C75035 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367DA1F85EF7700C75035 /* InfoViewController.swift */; };
+		653367DF1F85EF7700C75035 /* SharedDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367DB1F85EF7700C75035 /* SharedDrinksViewController.swift */; };
+		653367E01F85EF7700C75035 /* MyDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367DC1F85EF7700C75035 /* MyDrinksViewController.swift */; };
+		653367E11F85EF7700C75035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653367DD1F85EF7700C75035 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,6 @@
 /* Begin PBXFileReference section */
 		653367971F84356200C75035 /* NanoChallenge_CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge_CloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6533679A1F84356200C75035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6533679C1F84356200C75035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6533679F1F84356200C75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		653367A21F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NanoChallenge_CloudKit.xcdatamodel; sourceTree = "<group>"; };
 		653367A41F84356200C75035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		653367A71F84356200C75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,9 +55,17 @@
 		653367B91F84356200C75035 /* NanoChallenge_CloudKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge_CloudKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653367BD1F84356200C75035 /* NanoChallenge_CloudKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge_CloudKitUITests.swift; sourceTree = "<group>"; };
 		653367BF1F84356200C75035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrinksViewController.swift; sourceTree = "<group>"; };
-		93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDrinksViewController.swift; sourceTree = "<group>"; };
-		93EDDBD61F85B58C00F5F760 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		653367CB1F8563E100C75035 /* NanoChallenge_CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NanoChallenge_CloudKit.entitlements; sourceTree = "<group>"; };
+		653367CD1F8567BF00C75035 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		653367CF1F856B4700C75035 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		653367D11F856B5500C75035 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		653367D31F856B7000C75035 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		653367D51F856F0600C75035 /* CKRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExtension.swift; sourceTree = "<group>"; };
+		653367D81F85EF2200C75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		653367DA1F85EF7700C75035 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		653367DB1F85EF7700C75035 /* SharedDrinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDrinksViewController.swift; sourceTree = "<group>"; };
+		653367DC1F85EF7700C75035 /* MyDrinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrinksViewController.swift; sourceTree = "<group>"; };
+		653367DD1F85EF7700C75035 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653367CE1F8567BF00C75035 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +101,7 @@
 				653367B11F84356200C75035 /* NanoChallenge_CloudKitTests */,
 				653367BC1F84356200C75035 /* NanoChallenge_CloudKitUITests */,
 				653367981F84356200C75035 /* Products */,
+				653367CC1F8567BF00C75035 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,16 +118,21 @@
 		653367991F84356200C75035 /* NanoChallenge_CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				653367DA1F85EF7700C75035 /* InfoViewController.swift */,
+				653367DC1F85EF7700C75035 /* MyDrinksViewController.swift */,
+				653367DB1F85EF7700C75035 /* SharedDrinksViewController.swift */,
+				653367DD1F85EF7700C75035 /* ViewController.swift */,
+				653367D71F85EF2200C75035 /* Main.storyboard */,
+				653367CB1F8563E100C75035 /* NanoChallenge_CloudKit.entitlements */,
 				6533679A1F84356200C75035 /* AppDelegate.swift */,
-				6533679C1F84356200C75035 /* ViewController.swift */,
-				6533679E1F84356200C75035 /* Main.storyboard */,
-				93EDDBD21F850ADC00F5F760 /* MyDrinksViewController.swift */,
-				93EDDBD41F850AFB00F5F760 /* SharedDrinksViewController.swift */,
-				93EDDBD61F85B58C00F5F760 /* InfoViewController.swift */,
+				653367D51F856F0600C75035 /* CKRecordExtension.swift */,
 				653367A41F84356200C75035 /* Assets.xcassets */,
 				653367A61F84356200C75035 /* LaunchScreen.storyboard */,
 				653367A91F84356200C75035 /* Info.plist */,
 				653367A11F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld */,
+				653367CF1F856B4700C75035 /* User.swift */,
+				653367D11F856B5500C75035 /* Drink.swift */,
+				653367D31F856B7000C75035 /* CloudKitManager.swift */,
 			);
 			path = NanoChallenge_CloudKit;
 			sourceTree = "<group>";
@@ -135,6 +153,14 @@
 				653367BF1F84356200C75035 /* Info.plist */,
 			);
 			path = NanoChallenge_CloudKitUITests;
+			sourceTree = "<group>";
+		};
+		653367CC1F8567BF00C75035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				653367CD1F8567BF00C75035 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +232,14 @@
 					653367961F84356200C75035 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					653367AD1F84356200C75035 = {
 						CreatedOnToolsVersion = 9.0;
@@ -244,9 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653367D91F85EF2200C75035 /* Main.storyboard in Resources */,
 				653367A81F84356200C75035 /* LaunchScreen.storyboard in Resources */,
 				653367A51F84356200C75035 /* Assets.xcassets in Resources */,
-				653367A01F84356200C75035 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6533679D1F84356200C75035 /* ViewController.swift in Sources */,
-				93EDDBD51F850AFB00F5F760 /* SharedDrinksViewController.swift in Sources */,
+				653367E11F85EF7700C75035 /* ViewController.swift in Sources */,
+				653367DF1F85EF7700C75035 /* SharedDrinksViewController.swift in Sources */,
+				653367D01F856B4700C75035 /* User.swift in Sources */,
+				653367D61F856F0600C75035 /* CKRecordExtension.swift in Sources */,
+				653367D41F856B7000C75035 /* CloudKitManager.swift in Sources */,
+				653367DE1F85EF7700C75035 /* InfoViewController.swift in Sources */,
 				6533679B1F84356200C75035 /* AppDelegate.swift in Sources */,
+				653367D21F856B5500C75035 /* Drink.swift in Sources */,
+				653367E01F85EF7700C75035 /* MyDrinksViewController.swift in Sources */,
 				653367A31F84356200C75035 /* NanoChallenge_CloudKit.xcdatamodeld in Sources */,
-				93EDDBD71F85B58C00F5F760 /* InfoViewController.swift in Sources */,
-				93EDDBD31F850ADC00F5F760 /* MyDrinksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,20 +350,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6533679E1F84356200C75035 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6533679F1F84356200C75035 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		653367A61F84356200C75035 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				653367A71F84356200C75035 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		653367D71F85EF2200C75035 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				653367D81F85EF2200C75035 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -442,8 +480,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NanoChallenge_CloudKit/NanoChallenge_CloudKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F594ND8XLE;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
 				INFOPLIST_FILE = NanoChallenge_CloudKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKit";
@@ -457,8 +496,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NanoChallenge_CloudKit/NanoChallenge_CloudKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F594ND8XLE;
+				DEVELOPMENT_TEAM = 8G633XVRJD;
 				INFOPLIST_FILE = NanoChallenge_CloudKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.bryos.NanoChallenge-CloudKit";
