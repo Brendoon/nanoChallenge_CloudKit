@@ -26,7 +26,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return types.count
     }
+    
     @IBAction func Save(_ sender: Any) {
+        
+        
         
         if let name = nameTextField.text, !name.isEmpty, let descript = descriptTextField.text, !descript.isEmpty, let recipe = recipeTextField.text, !recipe.isEmpty {
             
@@ -47,6 +50,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.setBottomBorder()
+        recipeTextField.setBottomBorder()
+        descriptTextField.setBottomBorder()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
