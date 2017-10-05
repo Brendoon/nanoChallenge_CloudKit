@@ -16,12 +16,14 @@ class CloudKitManager {
     
     // Represents the default container specified in the iCloud section of the Capabilities tab for the project.
     let container: CKContainer
-    let publicDB: CKDatabase    
+    let publicDB: CKDatabase
+    var user: User
     
     // MARK: - Initializers
     init() {
         container = CKContainer.default()
         publicDB = container.publicCloudDatabase
+        user = User()
     }
     
     func save(drink: Drink, user: User) {
@@ -32,12 +34,13 @@ class CloudKitManager {
         record2[.descript] = drink.descript
         record2[.recipe] = drink.recipe
         record2[.drinkType] = drink.drinkType.rawValue
+        record2[.shared] = drink.shared.description
         
         guard let record = user.record else {
             print("User record is nil.")
             return
         }
-        
+         
         var drinks: [String] = []
         if !user.drinks.isEmpty {
             drinks = user.drinks
@@ -61,7 +64,7 @@ class CloudKitManager {
     
     private func updateUserRecord(_ userRecord: CKRecord, drinks: [String]) {
         userRecord["drinks"] = drinks as CKRecordValue
-        container.publicCloudDatabase.save(userRecord) { _, error in
+        publicDB.save(userRecord) { _, error in
             guard error == nil else {
                 // top-notch error handling
                 print("Error saving drinks", error?.localizedDescription)
@@ -74,7 +77,7 @@ class CloudKitManager {
     
     private func updateUserRecord(_ userRecord: CKRecord, fullName: String) {
         userRecord["fullName"] = fullName as CKRecordValue
-        container.publicCloudDatabase.save(userRecord) { _, error in
+        publicDB.save(userRecord) { _, error in
             guard error == nil else {
                 // top-notch error handling
                 return
@@ -95,7 +98,7 @@ class CloudKitManager {
             }
             print("Got user record ID \(recordID.recordName).")
             
-            self.container.publicCloudDatabase.fetch(withRecordID: recordID) { record, error in
+            self.publicDB.fetch(withRecordID: recordID) { record, error in
                 guard let record = record, error == nil else {
                     // show off your error handling skills
                     callback(nil, error)
@@ -161,13 +164,24 @@ class CloudKitManager {
                 let recipe = record.value(forKey: "recipe") as? String ?? ""
                 let drinkType = record.value(forKey: "drinkType") as? String ?? ""
                 let recordName = record.recordID.recordName
+                let shared = record.value(forKey: "shared") as? String ?? ""
                 
+                var user = Drink(name: name, descript: descript, recipe: recipe, drinkType: DrinkType(rawValue: drinkType)!, recordName: recordName)
                 
-                return Drink(name: name, descript: descript, recipe: recipe, drinkType: DrinkType(rawValue: drinkType)!, recordName: recordName)
+                user.shared = Bool.init(shared)!
+                
+                return user
             })
             
             callback(drinks, nil)
         }
+    }
+    
+    
+    func delete(drink: Drink) {
+        self.publicDB.delete(withRecordID: CKRecordID(recordName: drink.recordName!), completionHandler: { (recordID, error) in
+            
+        })
     }
     
 //    func startObservingChanges() {

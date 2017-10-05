@@ -11,16 +11,55 @@ import UIKit
 class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var sharedDrinks: [String] = []
+    fileprivate var sharedDrinks: [Drink] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadSections([0], with: .automatic)
+            }
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Shared Drinks"
-        sharedDrinks.append("Chá de camomila")
-        sharedDrinks.append("Chá de alecrim")
-        sharedDrinks.append("Chá verde")
+//        sharedDrinks.append("Chá de camomila")
+//        sharedDrinks.append("Chá de alecrim")
+//        sharedDrinks.append("Chá verde")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.tableFooterView = UIView()
+        
+        
+        
+    }
+    
+    func getDrinks() {
+        CloudKitManager.shared.fetchDrink { (drinks, error) in
+            guard error == nil else {
+                print("Ocorreu um erro na primeira busca")
+                print(error!)
+                return
+            }
+            
+            guard let drinks = drinks else {
+                return
+            }
+            
+            for drink in drinks {
+                if drink.shared == true && self.sharedDrinks.last?.recordName != drink.recordName {
+                    self.sharedDrinks.append(drink)
+                }
+            }
+            
+        }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.getDrinks()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +73,7 @@ class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = sharedDrinks[indexPath.row]
+        cell.textLabel?.text = sharedDrinks[indexPath.row].name
         return cell
     }
    

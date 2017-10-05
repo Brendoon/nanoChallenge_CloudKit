@@ -19,39 +19,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        CloudKitManager.shared.fetchUser { (user, error) in
-            guard error == nil else {
-                print("Ocorreu um erro na primeira busca")
-                print(error!)
-                return
-            }
-            
-            guard let user = user else {
-                print("user is nil")
-                return
-            }
-            
-            print(user.string())
-            
-            let coffee = Drink(name: "Black Coffee", descript: "Super Hot", recipe: "Something", drinkType: .coffee)
-            //let tea = Drink(name: "Ice Tea", descript: "Super Cold", recipe: "Something", drinkType: .tea)
-            
-            CloudKitManager.shared.save(drink: coffee, user: user)
-            //CloudKitManager.shared.save(drink: tea, user: user)
-        }
+//        CloudKitManager.shared.fetchUser { (user, error) in
+//            guard error == nil else {
+//                print("Ocorreu um erro na primeira busca")
+//                print(error!)
+//                return
+//            }
+//            
+//            guard let user = user else {
+//                print("user is nil")
+//                return
+//            }
+//            
+//            print(user.string())
+//            
+//            let coffee = Drink(name: "Black Coffee", descript: "Super Hot", recipe: "Something", drinkType: .coffee)
+//            //let tea = Drink(name: "Ice Tea", descript: "Super Cold", recipe: "Something", drinkType: .tea)
+//            
+//            CloudKitManager.shared.save(drink: coffee, user: user)
+//            //CloudKitManager.shared.save(drink: tea, user: user)
+//        }
+//        
+//        CloudKitManager.shared.fetchDrink { (drinks, error) in
+//            guard error == nil else {
+//                print("Ocorreu um erro na primeira busca")
+//                print(error!)
+//                return
+//            }
+//            
+//            drinks?.forEach({ (drink) in
+//                print(drink.string())
+//            })
+//        }
         
-        CloudKitManager.shared.fetchDrink { (drinks, error) in
-            guard error == nil else {
-                print("Ocorreu um erro na primeira busca")
-                print(error!)
-                return
-            }
-            
-            drinks?.forEach({ (drink) in
-                print(drink.string())
-            })
-        }
-        
+//        CloudKitManager.shared.save(drink: Drink(name: "Black Coffee", descript: "Super Hot", recipe: "Something", drinkType: .coffee), user: CloudKitManager.shared.user)
+//        
+//        if let name = nameTextField.text, !name.isEmpty, let descript = descriptTextField.text, !descript.isEmpty, let recipe = recipeTextField.text, !recipe.isEmpty, let type = recipeTextField.text, !type.isEmpty  {
+//            
+//            var drinkType = DrinkType.coffee
+//            if type == "coffee" {
+//                drinkType = .coffee
+//            } else {
+//                drinkType = .tea
+//            }
+//            
+//            CloudKitManager.shared.save(drink: Drink(name: name, descript: descript, recipe: recipe, drinkType: drinkType), user: CloudKitManager.shared.user)
+//            
+//        }
         return true
     }
 

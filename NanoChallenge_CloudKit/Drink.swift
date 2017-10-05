@@ -14,6 +14,7 @@ enum DrinkKey: String {
     case recipe
     case drinkType
     case recordName
+    case shared
 }
 
 enum DrinkType: String {
@@ -28,6 +29,7 @@ struct Drink {
     let recipe: String
     let drinkType: DrinkType
     let recordName: String?
+    var shared: Bool
     
     init(name: String, descript: String, recipe: String, drinkType: DrinkType, recordName: String) {
         self.name = name
@@ -35,6 +37,7 @@ struct Drink {
         self.recipe = recipe
         self.drinkType = drinkType
         self.recordName = recordName
+        self.shared = false
     }
     
     init(name: String, descript: String, recipe: String, drinkType: DrinkType) {
@@ -43,6 +46,7 @@ struct Drink {
         self.recipe = recipe
         self.drinkType = drinkType
         self.recordName = nil
+        self.shared = false
     }
     
     func string() -> String {
