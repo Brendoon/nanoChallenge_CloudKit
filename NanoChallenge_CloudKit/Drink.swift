@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CloudKit
 
 enum DrinkKey: String {
     case name
     case descript
     case recipe
     case drinkType
-    case recordName
+    case record
     case shared
 }
 
@@ -28,15 +29,15 @@ struct Drink {
     let descript: String
     let recipe: String
     let drinkType: DrinkType
-    let recordName: String?
+    let record: CKRecord?
     var shared: Bool
     
-    init(name: String, descript: String, recipe: String, drinkType: DrinkType, recordName: String) {
+    init(name: String, descript: String, recipe: String, drinkType: DrinkType, record: CKRecord) {
         self.name = name
         self.descript = descript
         self.recipe = recipe
         self.drinkType = drinkType
-        self.recordName = recordName
+        self.record = record
         self.shared = false
     }
     
@@ -45,12 +46,12 @@ struct Drink {
         self.descript = descript
         self.recipe = recipe
         self.drinkType = drinkType
-        self.recordName = nil
+        self.record = nil
         self.shared = false
     }
     
     func string() -> String {
-        return "\(name) - \(descript) - \(recipe) - \(drinkType.rawValue) - \(String(describing: recordName))"
+        return "\(name) - \(descript) - \(recipe) - \(drinkType.rawValue) - \(String(describing: record))"
     }
     
 }

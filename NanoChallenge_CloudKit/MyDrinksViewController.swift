@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class MyDrinksViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
     
@@ -26,7 +27,9 @@ class MyDrinksViewController: UIViewController,  UITableViewDataSource, UITableV
         title = "My Drinks"
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableview.tableFooterView = UIView()
-        
+    }
+    
+    func getDrinks() {
         CloudKitManager.shared.fetchUser { (user, error) in
             
             guard error == nil else {
@@ -39,24 +42,34 @@ class MyDrinksViewController: UIViewController,  UITableViewDataSource, UITableV
                 print("user is nil")
                 return
             }
-            
+            print(user.drinks,"jjjjjjjjjj")
             CloudKitManager.shared.user = user
-        }
-    }
-    
-    func getDrinks() {
-        CloudKitManager.shared.fetchDrink { (drinks, error) in
-            guard error == nil else {
-                print("Ocorreu um erro na primeira busca")
-                print(error!)
-                return
-            }
             
-            guard let drinks = drinks else {
-                return
+            CloudKitManager.shared.fetchDrink { (drinks, error) in
+                guard error == nil else {
+                    print("Ocorreu um erro na primeira busca")
+                    print(error!)
+                    return
+                }
+                
+                guard let drinks = drinks else {
+                    return
+                }
+                
+                var drinksFiltered: [Drink] = []
+                
+                for drk in drinks {
+                    for i in 0..<CloudKitManager.shared.user.drinks.count {
+                        if drk.record?.recordID.recordName == CloudKitManager.shared.user.drinks[i] {
+                            
+                            drinksFiltered.append(drk)
+                        }
+                    }
+                }
+                
+                
+                self.drinks = drinksFiltered
             }
-            
-            self.drinks = drinks
         }
     }
     
@@ -102,6 +115,15 @@ class MyDrinksViewController: UIViewController,  UITableViewDataSource, UITableV
                 self.drinks.remove(at: indexPath.row)
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let drink = drinks[indexPath.row]
+        let storyboards = UIStoryboard(name: "Main", bundle: nil)
+        let infoDrink = storyboards.instantiateViewController(withIdentifier: "Info") as! InfoViewController
+        
+        infoDrink.drink = drink
+        self.navigationController?.pushViewController(infoDrink, animated: true)
     }
     
 }

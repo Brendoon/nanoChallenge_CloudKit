@@ -52,20 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            })
 //        }
         
-//        CloudKitManager.shared.save(drink: Drink(name: "Black Coffee", descript: "Super Hot", recipe: "Something", drinkType: .coffee), user: CloudKitManager.shared.user)
-//        
-//        if let name = nameTextField.text, !name.isEmpty, let descript = descriptTextField.text, !descript.isEmpty, let recipe = recipeTextField.text, !recipe.isEmpty, let type = recipeTextField.text, !type.isEmpty  {
-//            
-//            var drinkType = DrinkType.coffee
-//            if type == "coffee" {
-//                drinkType = .coffee
-//            } else {
-//                drinkType = .tea
-//            }
-//            
-//            CloudKitManager.shared.save(drink: Drink(name: name, descript: descript, recipe: recipe, drinkType: drinkType), user: CloudKitManager.shared.user)
-//            
-//        }
         return true
     }
 

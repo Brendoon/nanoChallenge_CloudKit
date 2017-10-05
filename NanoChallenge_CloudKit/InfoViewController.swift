@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class InfoViewController: UIViewController {
 
@@ -15,11 +16,37 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var receita: UILabel!
     @IBOutlet weak var tipo: UILabel!
     
+    @IBOutlet weak var shareBtn: UIButton!
+    var drink: Drink!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if self.tabBarController?.selectedIndex == 1 {
+            self.shareBtn.isHidden = true
+        } else {
+            self.shareBtn.isHidden = false
+        }
+        
+        if self.drink.shared {
+            self.shareBtn.isEnabled = false
+            self.shareBtn.setTitle("Shared", for: .disabled)
+        }
+        
+        self.nome.text = drink.name
+        self.descricao.text = drink.descript
+        self.receita.text = drink.recipe
+        self.tipo.text = drink.drinkType.rawValue
+        
     }
+    
+    @IBAction func shareBtnPressed(_ sender: Any) {
+        CloudKitManager.shared.updateDrinkRecord(drink.record!, shared: "true")
+        self.shareBtn.isEnabled = false
+        self.shareBtn.setTitle("Shared", for: .disabled)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -22,6 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Cwe-75-12A" id="5pn-pD-Z5V"/>
+                                    <outlet property="delegate" destination="Cwe-75-12A" id="52E-wu-Z7x"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -127,6 +128,9 @@
                         <viewLayoutGuide key="safeArea" id="coO-PA-IKy"/>
                     </view>
                     <connections>
+                        <outlet property="descriptTextField" destination="YrG-vS-qvu" id="eTt-hD-OAU"/>
+                        <outlet property="nameTextField" destination="Ewp-1Y-aw9" id="ama-Uf-HvJ"/>
+                        <outlet property="recipeTextField" destination="wAP-1j-TkQ" id="C9Q-jP-c9o"/>
                         <outlet property="tipo" destination="anN-Kl-AEZ" id="TTj-Q5-7i4"/>
                     </connections>
                 </viewController>
@@ -178,6 +182,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Ejh-ml-1LB" id="7wE-rc-iyb"/>
+                                    <outlet property="delegate" destination="Ejh-ml-1LB" id="KDS-M1-a2t"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -202,7 +207,6 @@
         <!--Info View Controller-->
         <scene sceneID="ir9-wV-JM3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uj5-oo-zWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Info" id="uek-74-fcJ" customClass="InfoViewController" customModule="NanoChallenge_CloudKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIA-d3-6ad">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -264,17 +268,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7U-gL-Ld2">
+                                <rect key="frame" x="167" y="575" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareBtnPressed:" destination="uek-74-fcJ" eventType="touchUpInside" id="cfw-iS-oIl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v7U-gL-Ld2" firstAttribute="centerX" secondItem="2s1-AY-qJE" secondAttribute="centerX" id="56L-pY-PyP"/>
+                            <constraint firstItem="v7U-gL-Ld2" firstAttribute="top" secondItem="2s1-AY-qJE" secondAttribute="top" constant="511" id="QdK-Ar-K9q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2s1-AY-qJE"/>
                     </view>
                     <connections>
                         <outlet property="descricao" destination="3ds-dN-atY" id="jBv-ba-Gyo"/>
                         <outlet property="nome" destination="SNx-M3-2c3" id="qHd-Uw-eiF"/>
                         <outlet property="receita" destination="SZq-wC-Cht" id="aqt-hY-fzJ"/>
+                        <outlet property="shareBtn" destination="v7U-gL-Ld2" id="OC7-we-A9w"/>
                         <outlet property="tipo" destination="adZ-d9-FT8" id="oMy-wZ-22A"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uj5-oo-zWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2693.5999999999999" y="-63.418290854572717"/>
         </scene>

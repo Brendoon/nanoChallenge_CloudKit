@@ -67,7 +67,7 @@ class CloudKitManager {
         publicDB.save(userRecord) { _, error in
             guard error == nil else {
                 // top-notch error handling
-                print("Error saving drinks", error?.localizedDescription)
+                print("Error saving drinks", error?.localizedDescription ?? "")
                 return
             }
             
@@ -84,6 +84,18 @@ class CloudKitManager {
             }
             
             print("Successfully updated user record with a fullname")
+        }
+    }
+    
+    func updateDrinkRecord(_ drinkRecord: CKRecord, shared: String) {
+        drinkRecord["shared"] = shared as CKRecordValue
+        publicDB.save(drinkRecord) { _, error in
+            guard error == nil else {
+                // top-notch error handling
+                return
+            }
+            
+            print("Successfully updated drink record with a shared state")
         }
     }
     
@@ -163,10 +175,10 @@ class CloudKitManager {
                 let descript = record.value(forKey: "descript") as? String ?? ""
                 let recipe = record.value(forKey: "recipe") as? String ?? ""
                 let drinkType = record.value(forKey: "drinkType") as? String ?? ""
-                let recordName = record.recordID.recordName
+                let record = record
                 let shared = record.value(forKey: "shared") as? String ?? ""
                 
-                var user = Drink(name: name, descript: descript, recipe: recipe, drinkType: DrinkType(rawValue: drinkType)!, recordName: recordName)
+                var user = Drink(name: name, descript: descript, recipe: recipe, drinkType: DrinkType(rawValue: drinkType)!, record: record)
                 
                 user.shared = Bool.init(shared)!
                 
@@ -179,9 +191,19 @@ class CloudKitManager {
     
     
     func delete(drink: Drink) {
-        self.publicDB.delete(withRecordID: CKRecordID(recordName: drink.recordName!), completionHandler: { (recordID, error) in
+        for i in 0..<user.drinks.count {
+            if user.drinks[i] == drink.record!.recordID.recordName {
+                user.drinks.remove(at: i)
+                print("removeu")
+            }
+        }
+        
+        self.updateUserRecord(user.record!, drinks: user.drinks)
+        
+        self.publicDB.delete(withRecordID: CKRecordID(recordName: drink.record!.recordID.recordName), completionHandler: { (recordID, error) in
             
         })
+        
     }
     
 //    func startObservingChanges() {

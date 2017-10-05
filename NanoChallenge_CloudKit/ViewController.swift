@@ -13,6 +13,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let types = ["Coffee", "Tea"]
     @IBOutlet weak var tipo: UIPickerView!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var recipeTextField: UITextField!
+    @IBOutlet weak var descriptTextField: UITextField!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -23,12 +27,28 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return types.count
     }
     @IBAction func Save(_ sender: Any) {
+        
+        if let name = nameTextField.text, !name.isEmpty, let descript = descriptTextField.text, !descript.isEmpty, let recipe = recipeTextField.text, !recipe.isEmpty {
+            
+             let type = types[tipo.selectedRow(inComponent: 0)]
+            
+            var drinkType = DrinkType.coffee
+            if type == "Coffee" {
+                drinkType = .coffee
+            } else {
+                drinkType = .tea
+            }
+            
+            CloudKitManager.shared.save(drink: Drink(name: name, descript: descript, recipe: recipe, drinkType: drinkType), user: CloudKitManager.shared.user)
+            
+        }
    
         self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {

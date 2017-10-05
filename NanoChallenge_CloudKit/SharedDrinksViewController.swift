@@ -11,6 +11,7 @@ import UIKit
 class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    var drinksFiltered: [Drink] = []
     fileprivate var sharedDrinks: [Drink] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -45,11 +46,20 @@ class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITable
                 return
             }
             
-            for drink in drinks {
-                if drink.shared == true && self.sharedDrinks.last?.recordName != drink.recordName {
-                    self.sharedDrinks.append(drink)
+            var control = false
+            
+            for drk in drinks {
+                for i in self.sharedDrinks {
+                    if drk.record?.recordID.recordName == i.record?.recordID.recordName && !self.sharedDrinks.isEmpty{
+                        control = true
+                    }
+                }
+                if control == false && drk.shared {
+                    self.drinksFiltered.append(drk)
                 }
             }
+            
+            self.sharedDrinks = self.drinksFiltered
             
         }
 
@@ -77,13 +87,14 @@ class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("entrou")
-//        let sharedDrink = sharedDrinks[indexPath.row]
-//        let storyboards = UIStoryboard(name: "Main", bundle: nil)
-//        let infoDrink = storyboards.instantiateViewController(withIdentifier: "Info") as! InfoViewController
-//        self.navigationController?.pushViewController(infoDrink, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let drink = sharedDrinks[indexPath.row]
+        let storyboards = UIStoryboard(name: "Main", bundle: nil)
+        let infoDrink = storyboards.instantiateViewController(withIdentifier: "Info") as! InfoViewController
+        
+        infoDrink.drink = drink
+        self.navigationController?.pushViewController(infoDrink, animated: true)
+    }
 
 
 
