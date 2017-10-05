@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SharedDrinksViewController: UIViewController, UITableViewDataSource {
+class SharedDrinksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var sharedDrinks: [String] = []
@@ -16,6 +16,9 @@ class SharedDrinksViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Shared Drinks"
+        sharedDrinks.append("Chá de camomila")
+        sharedDrinks.append("Chá de alecrim")
+        sharedDrinks.append("Chá verde")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.tableFooterView = UIView()
     }
@@ -34,5 +37,15 @@ class SharedDrinksViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = sharedDrinks[indexPath.row]
         return cell
     }
+   
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("entrou")
+//        let sharedDrink = sharedDrinks[indexPath.row]
+//        let storyboards = UIStoryboard(name: "Main", bundle: nil)
+//        let infoDrink = storyboards.instantiateViewController(withIdentifier: "Info") as! InfoViewController
+//        self.navigationController?.pushViewController(infoDrink, animated: true)
+//    }
+
+
 
 }
